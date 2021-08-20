@@ -1,0 +1,17 @@
+# single gpu
+python train_net.py \
+    --config-file configs/ade20k-150/maskformer_R50_bs16_160k.yaml \
+    --num-gpus 1 SOLVER.IMS_PER_BATCH 2 SOLVER.BASE_LR 0.0001
+# max_mem: 3528M
+
+# single gpu
+python train_net.py \
+    --config-file configs/ade20k-150/maskformer_R50_bs16_160k.yaml \
+    --num-gpus 1 SOLVER.IMS_PER_BATCH 6 SOLVER.BASE_LR 0.0001
+# max_mem: 7239M
+
+# multi gpu
+python train_net.py \
+    --config-file configs/ade20k-150/maskformer_R50_bs16_160k.yaml \
+    --num-gpus 2 SOLVER.IMS_PER_BATCH 12 SOLVER.BASE_LR 0.0001
+max_mem: 8157M
