@@ -21,4 +21,11 @@ sudo chmod u-s /usr/sbin/groupadd
 sudo gpasswd -a docker sudo
 # sudo chown -R docker:docker /.pyenv
 
+# alias
+echo "alias ll='ls -larth'" >> /home/docker/.bashrc
+echo "alias rm='rm -rf'" >> /home/docker/.bashrc
+echo "alias cp='cp -r'" >> /home/docker/.bashrc
+echo "alias mkdir='mkdir -p'" >> /home/docker/.bashrc
+echo "alias less='less -NS'" >> /home/docker/.bashrc
+
 exec $@
