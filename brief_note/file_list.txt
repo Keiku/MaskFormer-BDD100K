@@ -60,7 +60,7 @@
 │   ├── ade20k_instance_imgCatIds.json
 │   ├── prepare_ade20k_full_sem_seg.py
 │   ├── prepare_ade20k_pan_seg.py
-│   ├── prepare_ade20k_sem_seg.py
+│   ├── prepare_ade20k_sem_seg.py # detectron2用にアノテーションを変換する
 │   ├── prepare_coco_stuff_10k_v1.0_sem_seg.py
 │   └── prepare_datasets.sh
 ├── demo
