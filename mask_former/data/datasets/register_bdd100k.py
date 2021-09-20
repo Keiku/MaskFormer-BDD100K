@@ -44,7 +44,7 @@ def register_all_bdd100k(root):
             image_root=image_dir,
             sem_seg_root=gt_dir,
             evaluator_type="sem_seg",
-            ignore_label=2,
+            ignore_label=255,
         )
 
 
