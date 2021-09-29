@@ -1,4 +1,4 @@
-_BASE_: Base-BDD100K-150.yaml
+_BASE_: Base-BDD100K-3.yaml
 MODEL:
   META_ARCHITECTURE: "MaskFormer"
   SEM_SEG_HEAD:
