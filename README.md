@@ -1,6 +1,6 @@
-# MaskFormer: Per-Pixel Classification is Not All You Need for Semantic Segmentation
+# MaskFormer-BDD100K
 
-[Bowen Cheng](https://bowenc0221.github.io/), [Alexander G. Schwing](https://alexander-schwing.de/), [Alexander Kirillov](https://alexander-kirillov.github.io/)
+Some benchmarks and easy-to-understand explanations for the BDD100K dataset in MaskFormer.
 
 [[`arXiv`](http://arxiv.org/abs/2107.06278)] [[`Project`](https://bowenc0221.github.io/maskformer)] [[`BibTeX`](#CitingMaskFormer)]
 
