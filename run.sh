@@ -16,3 +16,9 @@ python train_net.py \
 python train_net.py \
        --config-file configs/ade20k-150/maskformer_R50_bs16_160k.yaml \
        --eval-only OUTPUT_DIR output MODEL.WEIGHTS ./pretrained_models/model_final_d8dbeb.pkl
+
+# visualize
+python demo/visualize_data.py \
+       --config-file configs/ade20k-150/Vis-ADE20K-150.yaml \
+       --source annotation \
+       --output output2
