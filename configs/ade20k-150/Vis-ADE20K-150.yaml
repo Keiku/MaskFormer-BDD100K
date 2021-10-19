@@ -45,7 +45,7 @@ INPUT:
   # COLOR_AUG_SSD: True
   # SIZE_DIVISIBILITY: 512  # used in dataset mapper
   FORMAT: "RGB"
-  # DATASET_MAPPER_NAME: "mask_former_semantic"
+  DATASET_MAPPER_NAME: "mask_former_semantic"
 TEST:
   EVAL_PERIOD: 5000
   AUG:
