@@ -1,0 +1,122 @@
+⋊> ~/l/c/Study-MaskFormer on develop  tree                                    17:27:48
+.
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── GETTING_STARTED.md
+├── INSTALL.md
+├── LICENSE
+├── MODEL_ZOO.md
+├── README.md
+├── configs
+│   ├── ade20k-150
+│   │   ├── Base-ADE20K-150.yaml
+│   │   ├── maskformer_R101_bs16_160k.yaml
+│   │   ├── maskformer_R101c_bs16_160k.yaml
+│   │   ├── maskformer_R50_bs16_160k.yaml
+│   │   ├── per_pixel_baseline_R50_bs16_160k.yaml
+│   │   ├── per_pixel_baseline_plus_R50_bs16_160k.yaml
+│   │   └── swin
+│   │       ├── maskformer_swin_base_IN21k_384_bs16_160k_res640.yaml
+│   │       ├── maskformer_swin_large_IN21k_384_bs16_160k_res640.yaml
+│   │       ├── maskformer_swin_small_bs16_160k.yaml
+│   │       └── maskformer_swin_tiny_bs16_160k.yaml
+│   ├── ade20k-150-panoptic
+│   │   ├── maskformer_panoptic_R101_bs16_720k.yaml
+│   │   └── maskformer_panoptic_R50_bs16_720k.yaml
+│   ├── ade20k-full-847
+│   │   ├── Base-ADE20KFull-847.yaml
+│   │   ├── maskformer_R101_bs16_200k.yaml
+│   │   ├── maskformer_R101c_bs16_200k.yaml
+│   │   ├── maskformer_R50_bs16_200k.yaml
+│   │   ├── per_pixel_baseline_R50_bs16_200k.yaml
+│   │   └── per_pixel_baseline_plus_R50_bs16_200k.yaml
+│   ├── cityscapes-19
+│   │   ├── Base-Cityscapes-19.yaml
+│   │   ├── maskformer_R101_bs16_90k.yaml
+│   │   └── maskformer_R101c_bs16_90k.yaml
+│   ├── coco-panoptic
+│   │   ├── Base-COCO-PanopticSegmentation.yaml
+│   │   ├── maskformer_panoptic_R101_bs64_554k.yaml
+│   │   ├── maskformer_panoptic_R50_bs64_554k.yaml
+│   │   └── swin
+│   │       ├── maskformer_panoptic_swin_base_IN21k_384_bs64_554k.yaml
+│   │       ├── maskformer_panoptic_swin_large_IN21k_384_bs64_554k.yaml
+│   │       ├── maskformer_panoptic_swin_small_bs64_554k.yaml
+│   │       └── maskformer_panoptic_swin_tiny_bs64_554k.yaml
+│   ├── coco-stuff-10k-171
+│   │   ├── Base-COCOStuff10K-171.yaml
+│   │   ├── maskformer_R101_bs32_60k.yaml
+│   │   ├── maskformer_R101c_bs32_60k.yaml
+│   │   ├── maskformer_R50_bs32_60k.yaml
+│   │   ├── per_pixel_baseline_R50_bs32_60k.yaml
+│   │   └── per_pixel_baseline_plus_R50_bs32_60k.yaml
+│   └── mapillary-vistas-65
+│       ├── Base-MapillaryVistas-65.yaml
+│       └── maskformer_R50_bs16_300k.yaml
+├── datasets
+│   ├── ADEChallengeData2016 -> /home/keiichi.kuroyanagi/lost+found/datasets/ADE20K/ADEChallengeData2016
+│   ├── README.md
+│   ├── ade20k_instance_catid_mapping.txt
+│   ├── ade20k_instance_imgCatIds.json
+│   ├── prepare_ade20k_full_sem_seg.py
+│   ├── prepare_ade20k_pan_seg.py
+│   ├── prepare_ade20k_sem_seg.py # detectron2用にアノテーションを変換する
+│   ├── prepare_coco_stuff_10k_v1.0_sem_seg.py
+│   └── prepare_datasets.sh
+├── demo
+│   ├── README.md
+│   ├── demo.py
+│   └── predictor.py
+├── install_packages.sh
+├── mask_former
+│   ├── __init__.py
+│   ├── config.py
+│   ├── data
+│   │   ├── __init__.py
+│   │   ├── dataset_mappers # アノテーションデータセットの変換用マッパー
+│   │   │   ├── __init__.py
+│   │   │   ├── detr_panoptic_dataset_mapper.py
+│   │   │   ├── mask_former_panoptic_dataset_mapper.py
+│   │   │   └── mask_former_semantic_dataset_mapper.py
+│   │   └── datasets # カスタムデータセット登録用レジスター
+│   │       ├── __init__.py
+│   │       ├── register_ade20k_full.py
+│   │       ├── register_ade20k_panoptic.py
+│   │       ├── register_coco_stuff_10k.py
+│   │       └── register_mapillary_vistas.py
+│   ├── mask_former_model.py
+│   ├── modeling
+│   │   ├── __init__.py
+│   │   ├── backbone
+│   │   │   ├── __init__.py
+│   │   │   └── swin.py
+│   │   ├── criterion.py
+│   │   ├── heads
+│   │   │   ├── __init__.py
+│   │   │   ├── mask_former_head.py
+│   │   │   ├── per_pixel_baseline.py
+│   │   │   └── pixel_decoder.py
+│   │   ├── matcher.py
+│   │   └── transformer
+│   │       ├── __init__.py
+│   │       ├── position_encoding.py
+│   │       ├── transformer.py
+│   │       └── transformer_predictor.py
+│   ├── test_time_augmentation.py
+│   └── utils
+│       ├── __init__.py
+│       └── misc.py
+├── output
+│   ├── ADE_test_00003481.jpg
+│   └── ADE_test_00003482.jpg
+├── pretrained_models
+│   └── model_final_d8dbeb.pkl
+├── requirements.txt
+├── run.sh
+├── tools
+│   ├── README.md
+│   ├── convert-pretrained-swin-model-to-d2.py
+│   └── convert-torchvision-to-d2.py
+└── train_net.py
+
+35 directories, 123 files

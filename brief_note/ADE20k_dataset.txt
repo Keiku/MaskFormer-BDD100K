@@ -1,0 +1,31 @@
+# ADE20k Scene Parsing
+
+## ADEChallengeData2016
+
+ADEChallengeData2016.zip
+
+* annotations/: annotations of ADEChallengeData2016
+* images/: images of ADEChallengeData2016
+* sceneCategories.txt: 
+* objectInfo150.txt*: 
+
+release_test.zip
+
+* release_test/: test dataset of ADEChallengeData2016
+
+## ChallengeData2017
+
+The annotations instance for generating to ADE20k panoptic segmentation.
+
+* annotations_instance.tar: annotations instance of ChallengeData2017
+* annotations_instance/: unziped folder
+
+## Dataset for detectron2
+
+The detectron2 dataset for ADE20k panoptic segmentation.
+
+* annotations_detectron2/
+* ade20k_panoptic_train/
+* ade20k_panoptic_train.json
+* ade20k_panoptic_val/
+* ade20k_panoptic_val.json
