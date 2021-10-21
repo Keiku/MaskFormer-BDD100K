@@ -30,7 +30,7 @@ def _get_bdd100k_drivable_area_meta():
 
 
 def register_bdd100k_drivable_area(root):
-    root = os.path.join(root, "bdd100k")
+    root = os.path.join(root, "bdd100k_drivable_area")
     meta = _get_bdd100k_drivable_area_meta()
     for name, dirname in [("train", "train"), ("val", "val")]:
         image_dir = os.path.join(root, "images_detectron2", dirname)
